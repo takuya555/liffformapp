@@ -10,25 +10,13 @@
 <body>
 
     <form class="w-75 mx-auto">
-        <p class="mt-3">名前</p>
+        <p class="mt-3">店・物</p>
         <div>
-            <input class="form-control w-100 mt-1" name="name" placeholder="" required>
+            <input class="form-control w-100 mt-1" name="shop" placeholder="" required>
         </div>
-        <p class="mt-3">腕立て</p>
+        <p class="mt-3">金額</p>
         <div>
-            <input class="form-control w-100 mt-1" name="udetate" required>
-        </div>
-        <p class="mt-3">腹筋</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="fukkin" required>
-        </div>
-        <p class="mt-3">背筋</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="haikin" required>
-        </div>
-        <p class="mt-3">スクワット</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="sukuwat" required>
+            <input class="form-control w-100 mt-1" name="kingaku" required>
         </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
@@ -71,12 +59,9 @@
 
         $(function () {
             $('form').submit(function () {
-                const name    = $('input[name="name"]').val();
-                const udetate = $('input[name="udetate"]').val();
-                const fukkin  = $('input[name="fukkin"]').val();
-                const haikin  = $('input[name="haikin"]').val();
-                const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
+                const name    = $('input[name="shop"]').val();
+                const udetate = $('input[name="kingaku"]').val();
+                const msg = `${shop}\n${kingaku}`;
                 sendText(msg);
                 return false;
             });
